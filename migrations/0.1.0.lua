@@ -4,7 +4,7 @@
 
 for _, f in pairs(game.forces) do
     f.recipes['sil-filter-combinator'].enabled = f.technologies['circuit-network'].researched
-    if game.active_mods['nullius'] then
-        f.recipes['sil-filter-combinator'].enabled = f.technologies['nullius-computation'].researched
+    if f.technologies['circuit-network'] and f.technologies['circuit-network'].researched then
+        f.recipes['sil-filter-combinator'].enabled = true
     end
 end

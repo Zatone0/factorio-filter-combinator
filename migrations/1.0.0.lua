@@ -4,6 +4,11 @@
 
 require('__core__/lualib/util.lua')
 
+global = global or {}
+global.sil_fc_data = global.sil_fc_data or {}
+global.sil_filter_combinators = global.sil_filter_combinators or {}
+global.sil_fc_migration_data = global.sil_fc_migration_data or {}
+
 local name_prefix = 'sil-filter-combinator'
 local name_prefix_len = #name_prefix
 local local_data = table.deepcopy(global.sil_fc_data)
